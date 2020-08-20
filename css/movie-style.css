@@ -1,0 +1,178 @@
+h1.section-title{
+    font-size: 1.4em;
+    margin: 40px 0 0 10px
+}
+
+div.hot-movies{
+    display: flex;
+    overflow: scroll;
+}
+
+div.hot-movie-item{
+    margin-left: 10px;
+    width: 100px;
+    margin-top: 10px;
+    /* width:calc((100% - 45px) / 3); */
+}
+
+div.hot-movie-item-cover{
+    border-radius: 4px;
+    background-image: url("https://img9.doubanio.com/view/photo/m_ratio_poster/public/p2615992304.jpg");
+    width: 100%;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+div.hot-movie-item-title{
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+div.rating-container{
+    margin-top: 4px;
+    margin-left: -2px;
+    display: flex;
+}
+div.rating{
+    width: 14px;
+    height: 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.rating-full{
+    background-image: url(../img/rating_star_small_on.png);
+}
+
+div.rating-empty{
+    background-image: url(../img/rating_star_small_off.png);
+}
+
+div.rating-text{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+div.ranks{
+    margin: 0 10px;
+    width: auto;
+}
+
+div.rank-item{
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    background-color: #32323A;
+    border-radius: 4px;
+    display: flex;
+}
+
+div.rank-item-left{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.rank-item-right{
+    width: 75%;
+    height: 100%;
+    background-image: url("https://img1.doubanio.com/view/photo/photo/public/p2587027549.jpg");
+    background-position: center center;
+    background-size: cover;
+    border-radius: 0 4px 4px 0;
+}
+
+div.rank-item-list{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 4px 4px 0;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.rank-item-info{
+    color: white;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+div.rank-item-info > span{
+    color: #ffac2d;
+    font-size: 11px;
+    margin-left: 6px;
+}
+
+div.rank-item-left-hint{
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+}
+
+div.rank-item-left-title{
+    font-size: 17px;
+    color: white;
+}
+
+div.online-movies{
+    margin: 0 10px 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div.recommend-item{
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    width: auto;
+}
+
+div.recommend-item-left{
+    width: 25%;
+    height: 130px;
+    background: url("https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2593729173.jpg") center center / cover no-repeat; border-radius: 4px;
+}
+
+div.recommend-item-right{
+    width: 70%;
+    margin-left: 10px;
+}
+
+div.recommend-item-title{
+    font-size: 17px;
+}
+
+div.recommend-item-title span{
+    color: rgb(129, 129, 129);
+}
+
+p.recommend-item-info{
+    font-size: 15px;
+    color: rgb(19, 19, 19);
+}
+
+div.recommend-item-reason{
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+    padding: 10px;
+    color: rgba(0, 0, 0, .5);
+    font-size: 13px;
+}
+
+
+
+
