@@ -31,7 +31,6 @@ function addHotMovieItem(cover, title, rating){
     const movieCover = document.createElement('div')
     movieCover.setAttribute('class', 'hot-movie-item-cover')
     movieCover.style.backgroundImage = `url("${cover}")`
-    movieCover.style.height = `${movieItem.offsetWidth * 1.2}px`
     movieItem.appendChild(movieCover)
 
     //title
@@ -130,18 +129,14 @@ function parseOnlines(onlineItems){
 function addOnlineMovieItem(cover, title, rating){
     const hotMovieElement = document.createElement("div")
     hotMovieElement.setAttribute('class', 'hot-movie-item')
-    hotMovieElement.style.width = 'calc((100% - 40px) / 3)'
     hotMovieElement.style.marginLeft = 0
     hotMovieElement.style.marginRight = '10px'
     onlineMovies.appendChild(hotMovieElement)
 
-    console.log(hotMovieElement.offsetWidth)
-    
     //cover
     const coverElement = document.createElement('div')
     coverElement.setAttribute('class', 'hot-movie-item-cover')
     coverElement.style.backgroundImage = `url("${cover}")`
-    coverElement.style.height = `${hotMovieElement.offsetWidth * 1.3}px`
     hotMovieElement.appendChild(coverElement)
 
     //title
@@ -170,7 +165,6 @@ function addOnlineMovieItem(cover, title, rating){
 }
 
 function parseRecommends(){
-    console.log(recommends)
     for(let recommend of JSON.parse(fakeRecommends)['items']){
         if(recommend['pic'] == undefined)
             continue
@@ -184,6 +178,7 @@ function parseRecommends(){
         recommendCover.setAttribute('class', 'recommend-item-left')
         recommendCover.style.backgroundImage = `url("${recommend['pic']['normal']}")`
         recommendItemElement.appendChild(recommendCover)
+        // recommendCover.style.height = `${recommendCover.offsetWidth * 1.15}px`
 
         //right
         const recommendRight = document.createElement('div')
