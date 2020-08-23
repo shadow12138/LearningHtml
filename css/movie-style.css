@@ -12,6 +12,7 @@ div.hot-movie-item{
     margin-left: 10px;
     width: 100px;
     margin-top: 10px;
+    flex-shrink: 0;
     /* width:calc((100% - 45px) / 3); */
 }
 
@@ -128,7 +129,7 @@ div.rank-item-left-title{
 }
 
 div.online-movies{
-    margin: 0 10px 0 10px;
+    margin: 0 0 0 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -136,9 +137,15 @@ div.online-movies{
 
 div.recommend-item{
     margin-top: 20px;
-    padding: 10px;
     display: flex;
     width: auto;
+    padding: 10px 0;
+    margin: 0 10px;
+    border-bottom: #eee 1px solid;
+}
+
+div.recommend-item:last-child{
+    border-bottom: none;
 }
 
 div.recommend-item-left{
