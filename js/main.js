@@ -23,39 +23,40 @@ function getData(){
 }
 
 function addHotMovieItem(cover, title, rating){
-    const hotMovieElement = document.createElement("div")
-    hotMovieElement.setAttribute('class', 'hot-movie-item')
-    hotMovies.appendChild(hotMovieElement)
+    const movieItem = document.createElement("div")
+    movieItem.setAttribute('class', 'hot-movie-item')
+    hotMovies.appendChild(movieItem)
     
     //cover
-    const coverElement = document.createElement('div')
-    coverElement.setAttribute('class', 'hot-movie-item-cover')
-    coverElement.style.backgroundImage = `url("${cover}")`
-    hotMovieElement.appendChild(coverElement)
+    const movieCover = document.createElement('div')
+    movieCover.setAttribute('class', 'hot-movie-item-cover')
+    movieCover.style.backgroundImage = `url("${cover}")`
+    movieCover.style.height = `${movieItem.offsetWidth * 1.2}px`
+    movieItem.appendChild(movieCover)
 
     //title
-    const titleElement = document.createElement('div')
-    titleElement.setAttribute('class', 'hot-movie-item-title')
-    titleElement.innerHTML = title
-    hotMovieElement.appendChild(titleElement)
+    const movieTitle = document.createElement('div')
+    movieTitle.setAttribute('class', 'hot-movie-item-title')
+    movieTitle.innerHTML = title
+    movieItem.appendChild(movieTitle)
 
     //rating
-    const ratingElement = document.createElement('div')
-    ratingElement.setAttribute('class', 'rating-container')
+    const movieRating = document.createElement('div')
+    movieRating.setAttribute('class', 'rating-container')
     //star
     const stars = rating / 2
     for(let i = 1; i <= 5; i++){
-        const starElement = document.createElement('div')
-        starElement.setAttribute('class', i <= stars ? 'rating rating-full' : 'rating rating-empty')
-        ratingElement.appendChild(starElement)
+        const ratingStar = document.createElement('div')
+        ratingStar.setAttribute('class', i <= stars ? 'rating rating-full' : 'rating rating-empty')
+        movieRating.appendChild(ratingStar)
     }
     //score
-    const ratingTextElement = document.createElement('div')
-    ratingTextElement.setAttribute('class', 'rating-text')
-    ratingTextElement.innerHTML = `${rating}`
-    ratingElement.appendChild(ratingTextElement)
+    const ratingText = document.createElement('div')
+    ratingText.setAttribute('class', 'rating-text')
+    ratingText.innerHTML = `${rating}`
+    movieRating.appendChild(ratingText)
 
-    hotMovieElement.appendChild(ratingElement)
+    movieItem.appendChild(movieRating)
 }
 
 function parseHotMovies(movieItems){
